@@ -8,13 +8,12 @@ const chargingStatusToText: Map<number, string> = new Map([
   [0, 'in unknown state'],
   [1, 'charging'],
   [2, 'not charging'],
-  [3, 'fully charged'],
+  [3, 'fully charged']
 ]);
 
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
   @State chargingStatus: number = 0;
 
   aboutToAppear() {

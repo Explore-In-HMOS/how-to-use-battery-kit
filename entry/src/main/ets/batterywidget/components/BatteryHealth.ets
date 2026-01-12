@@ -11,7 +11,7 @@ const colorToEmoji: Map<Color, string> = new Map([
   [Color.Red, '❤️'],
   [Color.Yellow, '💛'],
   [Color.Gray, '🤍'],
-  [Color.Black, '🖤'],
+  [Color.Black, '🖤']
 ]);
 
 @Component

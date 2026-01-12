@@ -1,6 +1,6 @@
 {
   "app": {
-    "bundleName": "com.hmosdemos.batterystatus",
+    "bundleName": "com.hmosdemos.wearable.how_to_use_battery_kit",
     "vendor": "hmosdemos",
     "versionCode": 1000000,
     "versionName": "1.0.0",

@@ -73,7 +73,7 @@ struct BatteryWidgetCard {
     .onClick(() => {
       postCardAction(this, {
         action: this.actionType,
-        abilityName: this.abilityName,
+        abilityName: this.abilityName
       });
     })
   }

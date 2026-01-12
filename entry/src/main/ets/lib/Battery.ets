@@ -54,21 +54,20 @@ export function getBatteryPower(): PowerModel {
     batteryInfo.nowCurrent,
     batteryInfo.batterySOC,
     batteryInfo.batteryCapacityLevel,
-    batteryInfo.pluggedType == 0 ? false : true
+    batteryInfo.pluggedType === 0 ? false : true
   );
 }
 
 
 export function estimateRemaining(powerModel: PowerModel) {
-  const batteryCapacity_mAh = 867; // 540 mAh for 42mm Huawei Watch 5
+  const batteryCapacity = 867; // 540 mAh for 42mm Huawei Watch 5
 
-  let current_mA = powerModel.averageCurrent; // according to docs, batteryInfo.nowCurrent is unit of mA
-  if (deviceInfo.productModel == 'emulator') {
+  let current = powerModel.averageCurrent; // according to docs, batteryInfo.nowCurrent is unit of mA
+  if (deviceInfo.productModel === 'emulator') {
     // However, batteryInfo.nowCurrent returns 900000 in the emulator. Assume it is 9mA
-    current_mA = 9;
+    current = 9;
   }
 
-  // hours = remaining capacity (mAh) / current draw (mA)
-  const hours = (batteryCapacity_mAh * (powerModel.batterySOC / 100)) / current_mA;
+  const hours = (batteryCapacity * (powerModel.batterySOC / 100)) / current;
   return hours; // in hours
 }

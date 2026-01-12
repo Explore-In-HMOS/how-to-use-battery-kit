@@ -15,7 +15,7 @@ This project demonstrates the use of the Battery Kit on Huawei smart watches. It
 
 Tracking current battery capacity, battery health, estimated remaining time, battery temperature and charging status.
 
-# Technology Stack
+# Tech Stack
 **Languages**: ArkTS, ArkUI  
 **Frameworks**: HarmonyOS SDK 6.0.0
 **Tools**: DevEco Studio 6.0.0

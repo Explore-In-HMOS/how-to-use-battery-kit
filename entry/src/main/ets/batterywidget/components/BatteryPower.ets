@@ -35,7 +35,7 @@ struct BatteryPower {
     const minutes = Math.round((hours - Math.floor(hours)) * 60);
 
     // Build formatted string
-    let result = "";
+    let result = '';
     if (days > 0) {
       result += `${days}d`;
     }
@@ -46,7 +46,7 @@ struct BatteryPower {
       result += `${minutes}m`;
     }
 
-    return result || "0m"; // fallback if everything is 0
+    return result || '0m'; // fallback if everything is 0
   }
 
   build() {
